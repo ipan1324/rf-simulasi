@@ -1,0 +1,4 @@
+report/
+*.zip
+*.docx
+node_modules/

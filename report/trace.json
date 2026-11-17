@@ -1,0 +1,1473 @@
+{
+ "data": {
+  "target": "Meminjam Buku",
+  "attrs": [
+   {
+    "name": "Tugas",
+    "values": [
+     "Banyak",
+     "Sedang",
+     "Sedikit"
+    ]
+   },
+   {
+    "name": "Cuaca",
+    "values": [
+     "Cerah",
+     "Hujan"
+    ]
+   },
+   {
+    "name": "Waktu Luang",
+    "values": [
+     "Ada",
+     "Tidak"
+    ]
+   },
+   {
+    "name": "Wajib Referensi",
+    "values": [
+     "Ya",
+     "Tidak"
+    ]
+   }
+  ],
+  "classes": [
+   "Ya",
+   "Tidak"
+  ],
+  "rows": [
+   [
+    "Sedikit",
+    "Hujan",
+    "Tidak",
+    "Tidak",
+    "Tidak"
+   ],
+   [
+    "Sedikit",
+    "Hujan",
+    "Ada",
+    "Tidak",
+    "Tidak"
+   ],
+   [
+    "Sedang",
+    "Hujan",
+    "Tidak",
+    "Tidak",
+    "Tidak"
+   ],
+   [
+    "Banyak",
+    "Cerah",
+    "Ada",
+    "Tidak",
+    "Ya"
+   ],
+   [
+    "Banyak",
+    "Hujan",
+    "Tidak",
+    "Ya",
+    "Ya"
+   ],
+   [
+    "Banyak",
+    "Cerah",
+    "Ada",
+    "Ya",
+    "Ya"
+   ],
+   [
+    "Sedang",
+    "Cerah",
+    "Ada",
+    "Ya",
+    "Ya"
+   ],
+   [
+    "Sedikit",
+    "Cerah",
+    "Tidak",
+    "Tidak",
+    "Tidak"
+   ],
+   [
+    "Sedikit",
+    "Cerah",
+    "Ada",
+    "Ya",
+    "Ya"
+   ],
+   [
+    "Sedang",
+    "Cerah",
+    "Tidak",
+    "Ya",
+    "Ya"
+   ],
+   [
+    "Sedang",
+    "Hujan",
+    "Ada",
+    "Ya",
+    "Ya"
+   ],
+   [
+    "Sedang",
+    "Cerah",
+    "Ada",
+    "Tidak",
+    "Ya"
+   ],
+   [
+    "Banyak",
+    "Hujan",
+    "Ada",
+    "Tidak",
+    "Ya"
+   ],
+   [
+    "Banyak",
+    "Hujan",
+    "Tidak",
+    "Tidak",
+    "Tidak"
+   ]
+  ]
+ },
+ "sample": [
+  "Sedikit",
+  "Hujan",
+  "Ada",
+  "Ya"
+ ],
+ "votes": {
+  "Ya": 2,
+  "Tidak": 1
+ },
+ "final": "Ya",
+ "trees": [
+  {
+   "index": 1,
+   "bootstrap": [
+    4,
+    1,
+    8,
+    13,
+    2,
+    0,
+    9,
+    8,
+    7,
+    10,
+    0,
+    12,
+    4,
+    7
+   ],
+   "oob": [
+    3,
+    5,
+    6,
+    11
+   ],
+   "root": {
+    "id": "1",
+    "branch": null,
+    "n": 14,
+    "counts": [
+     7,
+     7
+    ],
+    "entropy": 1,
+    "leaf": false,
+    "rows": [
+     0,
+     1,
+     2,
+     3,
+     4,
+     5,
+     6,
+     7,
+     8,
+     9,
+     10,
+     11,
+     12,
+     13
+    ],
+    "candidates": [
+     {
+      "name": "Tugas",
+      "feature": 0,
+      "gain": 0.1398682871452559,
+      "split": 1.4926140680171258,
+      "gainRatio": 0.09370693345471744,
+      "gainStr": "1,000000 − ((4/14 × 0,811278) + (3/14 × 0,918296) + (7/14 × 0,863121)) = 0,139868",
+      "splitStr": "(-4/14 × log₂(4/14)) + (-3/14 × log₂(3/14)) + (-7/14 × log₂(7/14)) = 1,492614",
+      "grStr": "0,139868 / 1,492614 = 0,093707",
+      "values": [
+       {
+        "value": "Banyak",
+        "n": 4,
+        "counts": [
+         3,
+         1
+        ],
+        "entropy": 0.8112781244591328,
+        "entropyStr": "(-3/4 × log₂(3/4)) + (-1/4 × log₂(1/4)) = 0,811278",
+        "splitTerm": 0.5163871205878868
+       },
+       {
+        "value": "Sedang",
+        "n": 3,
+        "counts": [
+         2,
+         1
+        ],
+        "entropy": 0.9182958340544896,
+        "entropyStr": "(-2/3 × log₂(2/3)) + (-1/3 × log₂(1/3)) = 0,918296",
+        "splitTerm": 0.4762269474292389
+       },
+       {
+        "value": "Sedikit",
+        "n": 7,
+        "counts": [
+         2,
+         5
+        ],
+        "entropy": 0.863120568566631,
+        "entropyStr": "(-2/7 × log₂(2/7)) + (-5/7 × log₂(5/7)) = 0,863121",
+        "splitTerm": 0.5
+       }
+      ]
+     },
+     {
+      "name": "Wajib Referensi",
+      "feature": 3,
+      "gain": 0.6893917467430878,
+      "split": 0.9852281360342515,
+      "gainRatio": 0.6997280340754712,
+      "gainStr": "1,000000 − ((6/14 × 0,000000) + (8/14 × 0,543564)) = 0,689392",
+      "splitStr": "(-6/14 × log₂(6/14)) + (-8/14 × log₂(8/14)) = 0,985228",
+      "grStr": "0,689392 / 0,985228 = 0,699728",
+      "values": [
+       {
+        "value": "Ya",
+        "n": 6,
+        "counts": [
+         6,
+         0
+        ],
+        "entropy": 0,
+        "entropyStr": "(-6/6 × log₂(6/6)) + (-0/6 × log₂(0/6)) = 0,000000",
+        "splitTerm": 0.5238824662870492
+       },
+       {
+        "value": "Tidak",
+        "n": 8,
+        "counts": [
+         1,
+         7
+        ],
+        "entropy": 0.5435644431995964,
+        "entropyStr": "(-1/8 × log₂(1/8)) + (-7/8 × log₂(7/8)) = 0,543564",
+        "splitTerm": 0.46134566974720237
+       }
+      ]
+     }
+    ],
+    "totalStr": "(-7/14 × log₂(7/14)) + (-7/14 × log₂(7/14)) = 1,000000",
+    "feature": 3,
+    "featureName": "Wajib Referensi",
+    "children": [
+     {
+      "value": "Ya",
+      "node": {
+       "id": "1.1",
+       "branch": "Ya",
+       "n": 6,
+       "counts": [
+        6,
+        0
+       ],
+       "entropy": 0,
+       "leaf": true,
+       "rows": [
+        0,
+        2,
+        6,
+        7,
+        9,
+        12
+       ],
+       "label": "Ya",
+       "reason": "Semua data berada pada kelas yang sama"
+      }
+     },
+     {
+      "value": "Tidak",
+      "node": {
+       "id": "1.2",
+       "branch": "Tidak",
+       "n": 8,
+       "counts": [
+        1,
+        7
+       ],
+       "entropy": 0.5435644431995964,
+       "leaf": false,
+       "rows": [
+        1,
+        3,
+        4,
+        5,
+        8,
+        10,
+        11,
+        13
+       ],
+       "candidates": [
+        {
+         "name": "Tugas",
+         "feature": 0,
+         "gain": 0.2935644431995964,
+         "split": 1.2987949406953985,
+         "gainRatio": 0.22602832364161862,
+         "gainStr": "0,543564 − ((2/8 × 1,000000) + (1/8 × 0,000000) + (5/8 × 0,000000)) = 0,293564",
+         "splitStr": "(-2/8 × log₂(2/8)) + (-1/8 × log₂(1/8)) + (-5/8 × log₂(5/8)) = 1,298795",
+         "grStr": "0,293564 / 1,298795 = 0,226028",
+         "values": [
+          {
+           "value": "Banyak",
+           "n": 2,
+           "counts": [
+            1,
+            1
+           ],
+           "entropy": 1,
+           "entropyStr": "(-1/2 × log₂(1/2)) + (-1/2 × log₂(1/2)) = 1,000000",
+           "splitTerm": 0.5
+          },
+          {
+           "value": "Sedang",
+           "n": 1,
+           "counts": [
+            0,
+            1
+           ],
+           "entropy": 0,
+           "entropyStr": "(-0/1 × log₂(0/1)) + (-1/1 × log₂(1/1)) = 0,000000",
+           "splitTerm": 0.375
+          },
+          {
+           "value": "Sedikit",
+           "n": 5,
+           "counts": [
+            0,
+            5
+           ],
+           "entropy": 0,
+           "entropyStr": "(-0/5 × log₂(0/5)) + (-5/5 × log₂(5/5)) = 0,000000",
+           "splitTerm": 0.4237949406953986
+          }
+         ]
+        },
+        {
+         "name": "Cuaca",
+         "feature": 1,
+         "gain": 0.05604762696333082,
+         "split": 0.8112781244591328,
+         "gainRatio": 0.06908558886719268,
+         "gainStr": "0,543564 − ((2/8 × 0,000000) + (6/8 × 0,650022)) = 0,056048",
+         "splitStr": "(-2/8 × log₂(2/8)) + (-6/8 × log₂(6/8)) = 0,811278",
+         "grStr": "0,056048 / 0,811278 = 0,069086",
+         "values": [
+          {
+           "value": "Cerah",
+           "n": 2,
+           "counts": [
+            0,
+            2
+           ],
+           "entropy": 0,
+           "entropyStr": "(-0/2 × log₂(0/2)) + (-2/2 × log₂(2/2)) = 0,000000",
+           "splitTerm": 0.5
+          },
+          {
+           "value": "Hujan",
+           "n": 6,
+           "counts": [
+            1,
+            5
+           ],
+           "entropy": 0.6500224216483541,
+           "entropyStr": "(-1/6 × log₂(1/6)) + (-5/6 × log₂(5/6)) = 0,650022",
+           "splitTerm": 0.31127812445913283
+          }
+         ]
+        }
+       ],
+       "totalStr": "(-1/8 × log₂(1/8)) + (-7/8 × log₂(7/8)) = 0,543564",
+       "feature": 0,
+       "featureName": "Tugas",
+       "children": [
+        {
+         "value": "Banyak",
+         "node": {
+          "id": "1.2.1",
+          "branch": "Banyak",
+          "n": 2,
+          "counts": [
+           1,
+           1
+          ],
+          "entropy": 1,
+          "leaf": false,
+          "rows": [
+           3,
+           11
+          ],
+          "candidates": [
+           {
+            "name": "Cuaca",
+            "feature": 1,
+            "gain": 0,
+            "split": 0,
+            "gainRatio": 0,
+            "gainStr": "1,000000 − ((2/2 × 1,000000)) = 0,000000",
+            "splitStr": "(-2/2 × log₂(2/2)) = 0,000000",
+            "grStr": "0,000000 / 0,000000 = 0,000000",
+            "values": [
+             {
+              "value": "Hujan",
+              "n": 2,
+              "counts": [
+               1,
+               1
+              ],
+              "entropy": 1,
+              "entropyStr": "(-1/2 × log₂(1/2)) + (-1/2 × log₂(1/2)) = 1,000000",
+              "splitTerm": 0
+             }
+            ]
+           },
+           {
+            "name": "Waktu Luang",
+            "feature": 2,
+            "gain": 1,
+            "split": 1,
+            "gainRatio": 1,
+            "gainStr": "1,000000 − ((1/2 × 0,000000) + (1/2 × 0,000000)) = 1,000000",
+            "splitStr": "(-1/2 × log₂(1/2)) + (-1/2 × log₂(1/2)) = 1,000000",
+            "grStr": "1,000000 / 1,000000 = 1,000000",
+            "values": [
+             {
+              "value": "Ada",
+              "n": 1,
+              "counts": [
+               1,
+               0
+              ],
+              "entropy": 0,
+              "entropyStr": "(-1/1 × log₂(1/1)) + (-0/1 × log₂(0/1)) = 0,000000",
+              "splitTerm": 0.5
+             },
+             {
+              "value": "Tidak",
+              "n": 1,
+              "counts": [
+               0,
+               1
+              ],
+              "entropy": 0,
+              "entropyStr": "(-0/1 × log₂(0/1)) + (-1/1 × log₂(1/1)) = 0,000000",
+              "splitTerm": 0.5
+             }
+            ]
+           }
+          ],
+          "totalStr": "(-1/2 × log₂(1/2)) + (-1/2 × log₂(1/2)) = 1,000000",
+          "feature": 2,
+          "featureName": "Waktu Luang",
+          "children": [
+           {
+            "value": "Ada",
+            "node": {
+             "id": "1.2.1.1",
+             "branch": "Ada",
+             "n": 1,
+             "counts": [
+              1,
+              0
+             ],
+             "entropy": 0,
+             "leaf": true,
+             "rows": [
+              11
+             ],
+             "label": "Ya",
+             "reason": "Semua data berada pada kelas yang sama"
+            }
+           },
+           {
+            "value": "Tidak",
+            "node": {
+             "id": "1.2.1.2",
+             "branch": "Tidak",
+             "n": 1,
+             "counts": [
+              0,
+              1
+             ],
+             "entropy": 0,
+             "leaf": true,
+             "rows": [
+              3
+             ],
+             "label": "Tidak",
+             "reason": "Semua data berada pada kelas yang sama"
+            }
+           }
+          ]
+         }
+        },
+        {
+         "value": "Sedang",
+         "node": {
+          "id": "1.2.2",
+          "branch": "Sedang",
+          "n": 1,
+          "counts": [
+           0,
+           1
+          ],
+          "entropy": 0,
+          "leaf": true,
+          "rows": [
+           4
+          ],
+          "label": "Tidak",
+          "reason": "Semua data berada pada kelas yang sama"
+         }
+        },
+        {
+         "value": "Sedikit",
+         "node": {
+          "id": "1.2.3",
+          "branch": "Sedikit",
+          "n": 5,
+          "counts": [
+           0,
+           5
+          ],
+          "entropy": 0,
+          "leaf": true,
+          "rows": [
+           1,
+           5,
+           8,
+           10,
+           13
+          ],
+          "label": "Tidak",
+          "reason": "Semua data berada pada kelas yang sama"
+         }
+        }
+       ]
+      }
+     }
+    ]
+   },
+   "pred": {
+    "label": "Ya",
+    "path": [
+     {
+      "id": "1",
+      "feature": "Wajib Referensi",
+      "value": "Ya"
+     },
+     {
+      "id": "1.1",
+      "leaf": true,
+      "label": "Ya"
+     }
+    ]
+   }
+  },
+  {
+   "index": 2,
+   "bootstrap": [
+    4,
+    12,
+    5,
+    6,
+    3,
+    1,
+    5,
+    0,
+    3,
+    4,
+    4,
+    2,
+    8,
+    8
+   ],
+   "oob": [
+    7,
+    9,
+    10,
+    11,
+    13
+   ],
+   "root": {
+    "id": "1",
+    "branch": null,
+    "n": 14,
+    "counts": [
+     11,
+     3
+    ],
+    "entropy": 0.74959525725948,
+    "leaf": false,
+    "rows": [
+     0,
+     1,
+     2,
+     3,
+     4,
+     5,
+     6,
+     7,
+     8,
+     9,
+     10,
+     11,
+     12,
+     13
+    ],
+    "candidates": [
+     {
+      "name": "Tugas",
+      "feature": 0,
+      "gain": 0.3210238286880514,
+      "split": 1.3787834934861753,
+      "gainRatio": 0.23283120968931895,
+      "gainStr": "0,749595 − ((8/14 × 0,000000) + (2/14 × 1,000000) + (4/14 × 1,000000)) = 0,321024",
+      "splitStr": "(-8/14 × log₂(8/14)) + (-2/14 × log₂(2/14)) + (-4/14 × log₂(4/14)) = 1,378783",
+      "grStr": "0,321024 / 1,378783 = 0,232831",
+      "values": [
+       {
+        "value": "Banyak",
+        "n": 8,
+        "counts": [
+         8,
+         0
+        ],
+        "entropy": 0,
+        "entropyStr": "(-8/8 × log₂(8/8)) + (-0/8 × log₂(0/8)) = 0,000000",
+        "splitTerm": 0.46134566974720237
+       },
+       {
+        "value": "Sedang",
+        "n": 2,
+        "counts": [
+         1,
+         1
+        ],
+        "entropy": 1,
+        "entropyStr": "(-1/2 × log₂(1/2)) + (-1/2 × log₂(1/2)) = 1,000000",
+        "splitTerm": 0.40105070315108626
+       },
+       {
+        "value": "Sedikit",
+        "n": 4,
+        "counts": [
+         2,
+         2
+        ],
+        "entropy": 1,
+        "entropyStr": "(-2/4 × log₂(2/4)) + (-2/4 × log₂(2/4)) = 1,000000",
+        "splitTerm": 0.5163871205878868
+       }
+      ]
+     },
+     {
+      "name": "Waktu Luang",
+      "feature": 2,
+      "gain": 0.07930397259846889,
+      "split": 0.9402859586706309,
+      "gainRatio": 0.08434027102838826,
+      "gainStr": "0,749595 − ((9/14 × 0,503258) + (5/14 × 0,970951)) = 0,079304",
+      "splitStr": "(-9/14 × log₂(9/14)) + (-5/14 × log₂(5/14)) = 0,940286",
+      "grStr": "0,079304 / 0,940286 = 0,084340",
+      "values": [
+       {
+        "value": "Ada",
+        "n": 9,
+        "counts": [
+         8,
+         1
+        ],
+        "entropy": 0.5032583347756457,
+        "entropyStr": "(-8/9 × log₂(8/9)) + (-1/9 × log₂(1/9)) = 0,503258",
+        "splitTerm": 0.40977637753840174
+       },
+       {
+        "value": "Tidak",
+        "n": 5,
+        "counts": [
+         3,
+         2
+        ],
+        "entropy": 0.9709505944546686,
+        "entropyStr": "(-3/5 × log₂(3/5)) + (-2/5 × log₂(2/5)) = 0,970951",
+        "splitTerm": 0.5305095811322292
+       }
+      ]
+     }
+    ],
+    "totalStr": "(-11/14 × log₂(11/14)) + (-3/14 × log₂(3/14)) = 0,749595",
+    "feature": 0,
+    "featureName": "Tugas",
+    "children": [
+     {
+      "value": "Banyak",
+      "node": {
+       "id": "1.1",
+       "branch": "Banyak",
+       "n": 8,
+       "counts": [
+        8,
+        0
+       ],
+       "entropy": 0,
+       "leaf": true,
+       "rows": [
+        0,
+        1,
+        2,
+        4,
+        6,
+        8,
+        9,
+        10
+       ],
+       "label": "Ya",
+       "reason": "Semua data berada pada kelas yang sama"
+      }
+     },
+     {
+      "value": "Sedang",
+      "node": {
+       "id": "1.2",
+       "branch": "Sedang",
+       "n": 2,
+       "counts": [
+        1,
+        1
+       ],
+       "entropy": 1,
+       "leaf": false,
+       "rows": [
+        3,
+        11
+       ],
+       "candidates": [
+        {
+         "name": "Waktu Luang",
+         "feature": 2,
+         "gain": 1,
+         "split": 1,
+         "gainRatio": 1,
+         "gainStr": "1,000000 − ((1/2 × 0,000000) + (1/2 × 0,000000)) = 1,000000",
+         "splitStr": "(-1/2 × log₂(1/2)) + (-1/2 × log₂(1/2)) = 1,000000",
+         "grStr": "1,000000 / 1,000000 = 1,000000",
+         "values": [
+          {
+           "value": "Ada",
+           "n": 1,
+           "counts": [
+            1,
+            0
+           ],
+           "entropy": 0,
+           "entropyStr": "(-1/1 × log₂(1/1)) + (-0/1 × log₂(0/1)) = 0,000000",
+           "splitTerm": 0.5
+          },
+          {
+           "value": "Tidak",
+           "n": 1,
+           "counts": [
+            0,
+            1
+           ],
+           "entropy": 0,
+           "entropyStr": "(-0/1 × log₂(0/1)) + (-1/1 × log₂(1/1)) = 0,000000",
+           "splitTerm": 0.5
+          }
+         ]
+        },
+        {
+         "name": "Wajib Referensi",
+         "feature": 3,
+         "gain": 1,
+         "split": 1,
+         "gainRatio": 1,
+         "gainStr": "1,000000 − ((1/2 × 0,000000) + (1/2 × 0,000000)) = 1,000000",
+         "splitStr": "(-1/2 × log₂(1/2)) + (-1/2 × log₂(1/2)) = 1,000000",
+         "grStr": "1,000000 / 1,000000 = 1,000000",
+         "values": [
+          {
+           "value": "Ya",
+           "n": 1,
+           "counts": [
+            1,
+            0
+           ],
+           "entropy": 0,
+           "entropyStr": "(-1/1 × log₂(1/1)) + (-0/1 × log₂(0/1)) = 0,000000",
+           "splitTerm": 0.5
+          },
+          {
+           "value": "Tidak",
+           "n": 1,
+           "counts": [
+            0,
+            1
+           ],
+           "entropy": 0,
+           "entropyStr": "(-0/1 × log₂(0/1)) + (-1/1 × log₂(1/1)) = 0,000000",
+           "splitTerm": 0.5
+          }
+         ]
+        }
+       ],
+       "totalStr": "(-1/2 × log₂(1/2)) + (-1/2 × log₂(1/2)) = 1,000000",
+       "feature": 2,
+       "featureName": "Waktu Luang",
+       "children": [
+        {
+         "value": "Ada",
+         "node": {
+          "id": "1.2.1",
+          "branch": "Ada",
+          "n": 1,
+          "counts": [
+           1,
+           0
+          ],
+          "entropy": 0,
+          "leaf": true,
+          "rows": [
+           3
+          ],
+          "label": "Ya",
+          "reason": "Semua data berada pada kelas yang sama"
+         }
+        },
+        {
+         "value": "Tidak",
+         "node": {
+          "id": "1.2.2",
+          "branch": "Tidak",
+          "n": 1,
+          "counts": [
+           0,
+           1
+          ],
+          "entropy": 0,
+          "leaf": true,
+          "rows": [
+           11
+          ],
+          "label": "Tidak",
+          "reason": "Semua data berada pada kelas yang sama"
+         }
+        }
+       ]
+      }
+     },
+     {
+      "value": "Sedikit",
+      "node": {
+       "id": "1.3",
+       "branch": "Sedikit",
+       "n": 4,
+       "counts": [
+        2,
+        2
+       ],
+       "entropy": 1,
+       "leaf": false,
+       "rows": [
+        5,
+        7,
+        12,
+        13
+       ],
+       "candidates": [
+        {
+         "name": "Cuaca",
+         "feature": 1,
+         "gain": 1,
+         "split": 1,
+         "gainRatio": 1,
+         "gainStr": "1,000000 − ((2/4 × 0,000000) + (2/4 × 0,000000)) = 1,000000",
+         "splitStr": "(-2/4 × log₂(2/4)) + (-2/4 × log₂(2/4)) = 1,000000",
+         "grStr": "1,000000 / 1,000000 = 1,000000",
+         "values": [
+          {
+           "value": "Cerah",
+           "n": 2,
+           "counts": [
+            2,
+            0
+           ],
+           "entropy": 0,
+           "entropyStr": "(-2/2 × log₂(2/2)) + (-0/2 × log₂(0/2)) = 0,000000",
+           "splitTerm": 0.5
+          },
+          {
+           "value": "Hujan",
+           "n": 2,
+           "counts": [
+            0,
+            2
+           ],
+           "entropy": 0,
+           "entropyStr": "(-0/2 × log₂(0/2)) + (-2/2 × log₂(2/2)) = 0,000000",
+           "splitTerm": 0.5
+          }
+         ]
+        },
+        {
+         "name": "Waktu Luang",
+         "feature": 2,
+         "gain": 0.31127812445913283,
+         "split": 0.8112781244591328,
+         "gainRatio": 0.3836885465963443,
+         "gainStr": "1,000000 − ((3/4 × 0,918296) + (1/4 × 0,000000)) = 0,311278",
+         "splitStr": "(-3/4 × log₂(3/4)) + (-1/4 × log₂(1/4)) = 0,811278",
+         "grStr": "0,311278 / 0,811278 = 0,383689",
+         "values": [
+          {
+           "value": "Ada",
+           "n": 3,
+           "counts": [
+            2,
+            1
+           ],
+           "entropy": 0.9182958340544896,
+           "entropyStr": "(-2/3 × log₂(2/3)) + (-1/3 × log₂(1/3)) = 0,918296",
+           "splitTerm": 0.31127812445913283
+          },
+          {
+           "value": "Tidak",
+           "n": 1,
+           "counts": [
+            0,
+            1
+           ],
+           "entropy": 0,
+           "entropyStr": "(-0/1 × log₂(0/1)) + (-1/1 × log₂(1/1)) = 0,000000",
+           "splitTerm": 0.5
+          }
+         ]
+        }
+       ],
+       "totalStr": "(-2/4 × log₂(2/4)) + (-2/4 × log₂(2/4)) = 1,000000",
+       "feature": 1,
+       "featureName": "Cuaca",
+       "children": [
+        {
+         "value": "Cerah",
+         "node": {
+          "id": "1.3.1",
+          "branch": "Cerah",
+          "n": 2,
+          "counts": [
+           2,
+           0
+          ],
+          "entropy": 0,
+          "leaf": true,
+          "rows": [
+           12,
+           13
+          ],
+          "label": "Ya",
+          "reason": "Semua data berada pada kelas yang sama"
+         }
+        },
+        {
+         "value": "Hujan",
+         "node": {
+          "id": "1.3.2",
+          "branch": "Hujan",
+          "n": 2,
+          "counts": [
+           0,
+           2
+          ],
+          "entropy": 0,
+          "leaf": true,
+          "rows": [
+           5,
+           7
+          ],
+          "label": "Tidak",
+          "reason": "Semua data berada pada kelas yang sama"
+         }
+        }
+       ]
+      }
+     }
+    ]
+   },
+   "pred": {
+    "label": "Tidak",
+    "path": [
+     {
+      "id": "1",
+      "feature": "Tugas",
+      "value": "Sedikit"
+     },
+     {
+      "id": "1.3",
+      "feature": "Cuaca",
+      "value": "Hujan"
+     },
+     {
+      "id": "1.3.2",
+      "leaf": true,
+      "label": "Tidak"
+     }
+    ]
+   }
+  },
+  {
+   "index": 3,
+   "bootstrap": [
+    0,
+    8,
+    7,
+    2,
+    1,
+    9,
+    5,
+    2,
+    5,
+    5,
+    11,
+    0,
+    10,
+    5
+   ],
+   "oob": [
+    3,
+    4,
+    6,
+    12,
+    13
+   ],
+   "root": {
+    "id": "1",
+    "branch": null,
+    "n": 14,
+    "counts": [
+     8,
+     6
+    ],
+    "entropy": 0.9852281360342515,
+    "leaf": false,
+    "rows": [
+     0,
+     1,
+     2,
+     3,
+     4,
+     5,
+     6,
+     7,
+     8,
+     9,
+     10,
+     11,
+     12,
+     13
+    ],
+    "candidates": [
+     {
+      "name": "Waktu Luang",
+      "feature": 2,
+      "gain": 0.39603884492804464,
+      "split": 0.9852281360342515,
+      "gainRatio": 0.4019767914081133,
+      "gainStr": "0,985228 − ((8/14 × 0,543564) + (6/14 × 0,650022)) = 0,396039",
+      "splitStr": "(-8/14 × log₂(8/14)) + (-6/14 × log₂(6/14)) = 0,985228",
+      "grStr": "0,396039 / 0,985228 = 0,401977",
+      "values": [
+       {
+        "value": "Ada",
+        "n": 8,
+        "counts": [
+         7,
+         1
+        ],
+        "entropy": 0.5435644431995964,
+        "entropyStr": "(-7/8 × log₂(7/8)) + (-1/8 × log₂(1/8)) = 0,543564",
+        "splitTerm": 0.46134566974720237
+       },
+       {
+        "value": "Tidak",
+        "n": 6,
+        "counts": [
+         1,
+         5
+        ],
+        "entropy": 0.6500224216483541,
+        "entropyStr": "(-1/6 × log₂(1/6)) + (-5/6 × log₂(5/6)) = 0,650022",
+        "splitTerm": 0.5238824662870492
+       }
+      ]
+     },
+     {
+      "name": "Wajib Referensi",
+      "feature": 3,
+      "gain": 0.6893917467430878,
+      "split": 1,
+      "gainRatio": 0.6893917467430878,
+      "gainStr": "0,985228 − ((7/14 × 0,000000) + (7/14 × 0,591673)) = 0,689392",
+      "splitStr": "(-7/14 × log₂(7/14)) + (-7/14 × log₂(7/14)) = 1,000000",
+      "grStr": "0,689392 / 1,000000 = 0,689392",
+      "values": [
+       {
+        "value": "Ya",
+        "n": 7,
+        "counts": [
+         7,
+         0
+        ],
+        "entropy": 0,
+        "entropyStr": "(-7/7 × log₂(7/7)) + (-0/7 × log₂(0/7)) = 0,000000",
+        "splitTerm": 0.5
+       },
+       {
+        "value": "Tidak",
+        "n": 7,
+        "counts": [
+         1,
+         6
+        ],
+        "entropy": 0.5916727785823275,
+        "entropyStr": "(-1/7 × log₂(1/7)) + (-6/7 × log₂(6/7)) = 0,591673",
+        "splitTerm": 0.5
+       }
+      ]
+     }
+    ],
+    "totalStr": "(-8/14 × log₂(8/14)) + (-6/14 × log₂(6/14)) = 0,985228",
+    "feature": 3,
+    "featureName": "Wajib Referensi",
+    "children": [
+     {
+      "value": "Ya",
+      "node": {
+       "id": "1.1",
+       "branch": "Ya",
+       "n": 7,
+       "counts": [
+        7,
+        0
+       ],
+       "entropy": 0,
+       "leaf": true,
+       "rows": [
+        1,
+        5,
+        6,
+        8,
+        9,
+        12,
+        13
+       ],
+       "label": "Ya",
+       "reason": "Semua data berada pada kelas yang sama"
+      }
+     },
+     {
+      "value": "Tidak",
+      "node": {
+       "id": "1.2",
+       "branch": "Tidak",
+       "n": 7,
+       "counts": [
+        1,
+        6
+       ],
+       "entropy": 0.5916727785823275,
+       "leaf": false,
+       "rows": [
+        0,
+        2,
+        3,
+        4,
+        7,
+        10,
+        11
+       ],
+       "candidates": [
+        {
+         "name": "Tugas",
+         "feature": 0,
+         "gain": 0.19811742113040343,
+         "split": 0.9852281360342515,
+         "gainRatio": 0.20108786369811496,
+         "gainStr": "0,591673 − ((3/7 × 0,918296) + (4/7 × 0,000000)) = 0,198117",
+         "splitStr": "(-3/7 × log₂(3/7)) + (-4/7 × log₂(4/7)) = 0,985228",
+         "grStr": "0,198117 / 0,985228 = 0,201088",
+         "values": [
+          {
+           "value": "Sedang",
+           "n": 3,
+           "counts": [
+            1,
+            2
+           ],
+           "entropy": 0.9182958340544896,
+           "entropyStr": "(-1/3 × log₂(1/3)) + (-2/3 × log₂(2/3)) = 0,918296",
+           "splitTerm": 0.5238824662870492
+          },
+          {
+           "value": "Sedikit",
+           "n": 4,
+           "counts": [
+            0,
+            4
+           ],
+           "entropy": 0,
+           "entropyStr": "(-0/4 × log₂(0/4)) + (-4/4 × log₂(4/4)) = 0,000000",
+           "splitTerm": 0.46134566974720237
+          }
+         ]
+        },
+        {
+         "name": "Cuaca",
+         "feature": 1,
+         "gain": 0.3059584928680418,
+         "split": 0.863120568566631,
+         "gainRatio": 0.3544794366054115,
+         "gainStr": "0,591673 − ((2/7 × 1,000000) + (5/7 × 0,000000)) = 0,305958",
+         "splitStr": "(-2/7 × log₂(2/7)) + (-5/7 × log₂(5/7)) = 0,863121",
+         "grStr": "0,305958 / 0,863121 = 0,354479",
+         "values": [
+          {
+           "value": "Cerah",
+           "n": 2,
+           "counts": [
+            1,
+            1
+           ],
+           "entropy": 1,
+           "entropyStr": "(-1/2 × log₂(1/2)) + (-1/2 × log₂(1/2)) = 1,000000",
+           "splitTerm": 0.5163871205878868
+          },
+          {
+           "value": "Hujan",
+           "n": 5,
+           "counts": [
+            0,
+            5
+           ],
+           "entropy": 0,
+           "entropyStr": "(-0/5 × log₂(0/5)) + (-5/5 × log₂(5/5)) = 0,000000",
+           "splitTerm": 0.3467334479787441
+          }
+         ]
+        }
+       ],
+       "totalStr": "(-1/7 × log₂(1/7)) + (-6/7 × log₂(6/7)) = 0,591673",
+       "feature": 1,
+       "featureName": "Cuaca",
+       "children": [
+        {
+         "value": "Cerah",
+         "node": {
+          "id": "1.2.1",
+          "branch": "Cerah",
+          "n": 2,
+          "counts": [
+           1,
+           1
+          ],
+          "entropy": 1,
+          "leaf": false,
+          "rows": [
+           2,
+           10
+          ],
+          "candidates": [
+           {
+            "name": "Tugas",
+            "feature": 0,
+            "gain": 1,
+            "split": 1,
+            "gainRatio": 1,
+            "gainStr": "1,000000 − ((1/2 × 0,000000) + (1/2 × 0,000000)) = 1,000000",
+            "splitStr": "(-1/2 × log₂(1/2)) + (-1/2 × log₂(1/2)) = 1,000000",
+            "grStr": "1,000000 / 1,000000 = 1,000000",
+            "values": [
+             {
+              "value": "Sedang",
+              "n": 1,
+              "counts": [
+               1,
+               0
+              ],
+              "entropy": 0,
+              "entropyStr": "(-1/1 × log₂(1/1)) + (-0/1 × log₂(0/1)) = 0,000000",
+              "splitTerm": 0.5
+             },
+             {
+              "value": "Sedikit",
+              "n": 1,
+              "counts": [
+               0,
+               1
+              ],
+              "entropy": 0,
+              "entropyStr": "(-0/1 × log₂(0/1)) + (-1/1 × log₂(1/1)) = 0,000000",
+              "splitTerm": 0.5
+             }
+            ]
+           },
+           {
+            "name": "Waktu Luang",
+            "feature": 2,
+            "gain": 1,
+            "split": 1,
+            "gainRatio": 1,
+            "gainStr": "1,000000 − ((1/2 × 0,000000) + (1/2 × 0,000000)) = 1,000000",
+            "splitStr": "(-1/2 × log₂(1/2)) + (-1/2 × log₂(1/2)) = 1,000000",
+            "grStr": "1,000000 / 1,000000 = 1,000000",
+            "values": [
+             {
+              "value": "Ada",
+              "n": 1,
+              "counts": [
+               1,
+               0
+              ],
+              "entropy": 0,
+              "entropyStr": "(-1/1 × log₂(1/1)) + (-0/1 × log₂(0/1)) = 0,000000",
+              "splitTerm": 0.5
+             },
+             {
+              "value": "Tidak",
+              "n": 1,
+              "counts": [
+               0,
+               1
+              ],
+              "entropy": 0,
+              "entropyStr": "(-0/1 × log₂(0/1)) + (-1/1 × log₂(1/1)) = 0,000000",
+              "splitTerm": 0.5
+             }
+            ]
+           }
+          ],
+          "totalStr": "(-1/2 × log₂(1/2)) + (-1/2 × log₂(1/2)) = 1,000000",
+          "feature": 0,
+          "featureName": "Tugas",
+          "children": [
+           {
+            "value": "Sedang",
+            "node": {
+             "id": "1.2.1.1",
+             "branch": "Sedang",
+             "n": 1,
+             "counts": [
+              1,
+              0
+             ],
+             "entropy": 0,
+             "leaf": true,
+             "rows": [
+              10
+             ],
+             "label": "Ya",
+             "reason": "Semua data berada pada kelas yang sama"
+            }
+           },
+           {
+            "value": "Sedikit",
+            "node": {
+             "id": "1.2.1.2",
+             "branch": "Sedikit",
+             "n": 1,
+             "counts": [
+              0,
+              1
+             ],
+             "entropy": 0,
+             "leaf": true,
+             "rows": [
+              2
+             ],
+             "label": "Tidak",
+             "reason": "Semua data berada pada kelas yang sama"
+            }
+           }
+          ]
+         }
+        },
+        {
+         "value": "Hujan",
+         "node": {
+          "id": "1.2.2",
+          "branch": "Hujan",
+          "n": 5,
+          "counts": [
+           0,
+           5
+          ],
+          "entropy": 0,
+          "leaf": true,
+          "rows": [
+           0,
+           3,
+           4,
+           7,
+           11
+          ],
+          "label": "Tidak",
+          "reason": "Semua data berada pada kelas yang sama"
+         }
+        }
+       ]
+      }
+     }
+    ]
+   },
+   "pred": {
+    "label": "Ya",
+    "path": [
+     {
+      "id": "1",
+      "feature": "Wajib Referensi",
+      "value": "Ya"
+     },
+     {
+      "id": "1.1",
+      "leaf": true,
+      "label": "Ya"
+     }
+    ]
+   }
+  }
+ ]
+}

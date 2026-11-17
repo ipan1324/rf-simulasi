@@ -1,0 +1,112 @@
+<!doctype html>
+<html lang="id">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="color-scheme" content="light dark">
+  <meta name="description"
+    content="Simulasi Random Forest langkah demi langkah: bootstrap, entropy, gain ratio, pohon keputusan, dan mayoritas vote. Studi kasus peminjaman buku perpustakaan.">
+  <title>Random Forest Simulator</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <a class="skip" href="#main">Lewati ke konten</a>
+
+  <svg width="0" height="0" aria-hidden="true" focusable="false" style="position:absolute">
+    <filter id="ink" x="-5%" y="-5%" width="110%" height="110%">
+      <feTurbulence type="fractalNoise" baseFrequency="0.9" numOctaves="2" seed="4" result="n" />
+      <feDisplacementMap in="SourceGraphic" in2="n" scale="2.2" />
+    </filter>
+  </svg>
+
+  <div class="shell">
+    <nav class="rail" aria-label="Langkah simulasi">
+      <p class="rail__brand">Random Forest<span>Simulator</span></p>
+      <ol class="rail__list" id="rail"></ol>
+    </nav>
+
+    <main id="main" class="main">
+      <header class="hero">
+        <div class="hero__text">
+          <h1>Random Forest, dihitung langkah demi langkah</h1>
+          <p>Apakah seorang mahasiswa akan meminjam buku di perpustakaan? Ubah data atau parameter di bawah, dan seluruh
+            hitungan di halaman ini ikut berubah.</p>
+        </div>
+        <div class="stamp-wrap" id="stamp" aria-live="polite"></div>
+      </header>
+
+      <section class="sec" id="s-data" aria-labelledby="h-data">
+        <h2 id="h-data">Data dan parameter</h2>
+        <p class="sec__lead">Klik nilai pada tabel untuk mengubahnya. Hasil dihitung ulang otomatis.</p>
+        <div class="data-grid">
+          <div class="data-grid__table">
+            <div class="scroll" tabindex="0" role="region" aria-label="Tabel data latih">
+              <table id="tbl-data" class="tbl tbl--edit"></table>
+            </div>
+          </div>
+          <aside class="panel" aria-label="Parameter">
+            <h3>Parameter hutan</h3>
+            <div class="stepper" id="st-trees"></div>
+            <div class="stepper" id="st-m"></div>
+            <div class="seedrow">
+              <label for="p-seed">Seed acak</label>
+              <div class="seedrow__ctl">
+                <input id="p-seed" type="number" min="0" value="12" inputmode="numeric">
+                <button type="button" class="btn" id="btn-rand">Acak seed</button>
+              </div>
+              <p class="hint">Seed yang sama selalu memberi hasil yang sama, jadi hitungan bisa diperiksa ulang.</p>
+            </div>
+            <h3>Data uji</h3>
+            <div id="sample-box" class="sample"></div>
+            <button type="button" class="btn btn--quiet" id="btn-reset">Kembalikan data awal</button>
+          </aside>
+        </div>
+      </section>
+
+      <section class="sec" id="s-boot" aria-labelledby="h-boot">
+        <h2 id="h-boot">Bootstrap sampling</h2>
+        <p class="sec__lead">Tiap pohon dilatih dari <span id="n-total"></span> data yang diambil acak dengan
+          pengembalian. Nomor yang terambil lebih dari sekali ditandai jumlahnya, nomor yang tidak terambil dilewati
+          (out-of-bag).</p>
+        <div id="boot"></div>
+      </section>
+
+      <section class="sec" id="s-trees" aria-labelledby="h-trees">
+        <h2 id="h-trees">Pohon keputusan</h2>
+        <p class="sec__lead">Pilih pohon, lalu klik sebuah node pada diagram untuk melihat perhitungannya. Garis ungu
+          adalah jalur data uji.</p>
+        <div id="trees"></div>
+      </section>
+
+      <section class="sec" id="s-vote" aria-labelledby="h-vote">
+        <h2 id="h-vote">Mayoritas vote</h2>
+        <div id="vote"></div>
+      </section>
+
+      <details class="formulas sec" id="s-formula">
+        <summary>Rumus yang dipakai</summary>
+        <dl>
+          <dt>Entropy</dt>
+          <dd class="mono">Entropy(S) = Σ −pᵢ · log₂(pᵢ)</dd>
+          <dt>Gain</dt>
+          <dd class="mono">Gain(S, A) = Entropy(S) − Σ (|Sᵢ| / |S|) · Entropy(Sᵢ)</dd>
+          <dt>Split Info</dt>
+          <dd class="mono">SplitInfo(S, A) = −Σ (|Sᵢ| / |S|) · log₂(|Sᵢ| / |S|)</dd>
+          <dt>Gain Ratio</dt>
+          <dd class="mono">GainRatio(S, A) = Gain(S, A) / SplitInfo(S, A)</dd>
+        </dl>
+        <p class="hint">Atribut dengan Gain Ratio tertinggi dipakai untuk memecah node. Jika nilainya sama, dipilih
+          atribut yang urutannya paling awal.</p>
+      </details>
+
+      <footer class="foot">Seluruh perhitungan berjalan di browser.</footer>
+    </main>
+  </div>
+
+  <script src="core.js"></script>
+  <script src="app.js"></script>
+</body>
+
+</html>
